@@ -18,3 +18,28 @@ int row(int x, int y)
     return n;
 }
 */
+
+//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+//452 -> 11
+//82 -> 10
+//9012 -> 12
+Console.WriteLine("Введите число");
+string str = Console.ReadLine()!;
+Console.WriteLine($"Сумма цифр числа {str} равна {Len(str)}");
+
+int Len(string len)
+{
+    int sum = 0;
+    int n = len.Length;
+    string x;
+    for (int i = 0; i < n; i++)
+    {
+        x = Convert.ToString(len[i]);
+        sum = sum + int.Parse(x);
+        Console.WriteLine();
+        Console.WriteLine(Convert.ToInt16(x));
+    }
+    return sum;
+}
+
+
