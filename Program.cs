@@ -23,7 +23,8 @@ int row(int x, int y)
 //452 -> 11
 //82 -> 10
 //9012 -> 12
-Console.WriteLine("Введите число");
+
+/*Console.WriteLine("Введите число");
 string str = Console.ReadLine()!;
 Console.WriteLine($"Сумма цифр числа {str} равна {Len(str)}");
 
@@ -41,5 +42,46 @@ int Len(string len)
     }
     return sum;
 }
+*/
+
+//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+//1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+//6, 1, 33 -> [6, 1, 33]
+//_______________Вариант №1 с рандомным заполнением_______________________
+/*Console.WriteLine("Произвольный массив из 8 элементов");
+int N = 8;
+int[] Arr1(int len)
+{
+    int[] arr = new int[len];
+
+    for (int i = 0; i < len; i++)
+    {
+        arr[i] = new Random().Next();
+    }
+    return arr;
+}
+Console.WriteLine($"[ {String.Join(" | ", Arr1(N))} ]");*/
+//_______________Вариант №2 с вводом с клавиатуры_______________________
+
+Console.WriteLine("Введите число из 8-ми цифр");
+string str = Console.ReadLine()!;
+while (str.Length != 8)
+{
+    Console.WriteLine("Введите число из 8-ми цифр");
+    str = Console.ReadLine()!;
+
+}
+Console.WriteLine($"[ {String.Join(" | ", Arr1(8))} ]");
 
 
+int[] Arr1(int len)
+{
+    int[] arr = new int[len];
+    string x;
+    for (int i = 0; i < len; i++)
+    {
+        x = Convert.ToString(str[i]);
+        arr[i] = int.Parse(x);
+    }
+    return arr;
+}
